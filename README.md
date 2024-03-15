@@ -12,12 +12,13 @@
 2. Перейдите в директорию проекта:
 
    ```bash
-   cd laravel
+   cd post_api
 
 3. Установите зависимости PHP:
 
    ```bash
-   docker-compose run install
+   docker-compose composer run install
+   docker-compose composer run update
 
 4. Запустите контейнеры Docker:
 
@@ -27,7 +28,7 @@
 5. Скопируйте файл .env.example в .env:
 
    ```bash
-   cp .env.example .env
+   cp src/.env.example src/.env
 
 6. Сгенерируйте ключ приложения:
 
@@ -36,7 +37,7 @@
 
 7. Примените миграции базы данных:
    ```bash
-   docker-compose run artisan migrate
+   docker-compose run artisan migrate --seed
 
 
 ## Использование API
